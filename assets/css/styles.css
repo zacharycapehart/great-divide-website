@@ -417,7 +417,7 @@ body {
     }
 
     #primary-nav.is-open {
-        max-height: 300px;
+        max-height: 100vh;
     }
 
     .nav-list {

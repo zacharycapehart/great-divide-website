@@ -23,11 +23,14 @@ if (navToggle && primaryNav) {
     });
 }
 
-// ── Reservation form: set minimum date to today ──
+// ── Reservation form: set minimum date to today (local time) ──
 const dateInput = document.getElementById("res-date");
 if (dateInput) {
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.setAttribute("min", today);
+    const now = new Date();
+    const yyyy = now.getFullYear();
+    const mm = String(now.getMonth() + 1).padStart(2, "0");
+    const dd = String(now.getDate()).padStart(2, "0");
+    dateInput.setAttribute("min", yyyy + "-" + mm + "-" + dd);
 }
 
 // ── Reservation form: client-side submission feedback ──
