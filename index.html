@@ -4,82 +4,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Divide Restaurant</title>
-    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting.">
+    <title>Great Divide Restaurant — Farm to Table Dining</title>
+    <meta name="description" content="Great Divide Restaurant serves fresh, seasonal farm-to-table dishes in a warm, inviting atmosphere. Join us for lunch, dinner, and weekend brunch.">
+    <meta name="keywords" content="Great Divide Restaurant, farm to table, seasonal dining, local restaurant, brunch, dinner">
+    <meta property="og:title" content="Great Divide Restaurant">
+    <meta property="og:description" content="Fresh, seasonal farm-to-table dishes in a warm, inviting atmosphere.">
+    <meta property="og:type" content="restaurant">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <div class="container header-inner">
-            <h1 class="logo">Great Divide</h1>
-            <nav>
+            <a href="#home" class="logo-link" aria-label="Great Divide Restaurant — home">
+                <span class="logo">Great Divide</span>
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav id="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#visit">Visit</a></li>
+                    <li><a href="#reserve" class="nav-cta">Reserve</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
+    <main id="main-content">
+        <!-- Hero -->
+        <section id="home" class="hero" aria-label="Welcome">
+            <div class="container hero-content">
                 <p class="eyebrow">Farm to Table</p>
-                <h2>Welcome to Great Divide Restaurant</h2>
-                <p>
+                <h1>Great Divide Restaurant</h1>
+                <p class="hero-sub">
                     Seasonal ingredients, bold flavors, and a neighborhood atmosphere.
                     Join us for lunch, dinner, and weekend brunch.
                 </p>
-                <a class="button" href="#visit">Reserve a Table</a>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h3>About Us</h3>
-                <p>
-                    We are a locally owned restaurant focused on fresh, sustainable ingredients.
-                    Our menu changes regularly to highlight what is in season.
-                </p>
-            </div>
-        </section>
-
-        <section id="menu" class="section section-muted">
-            <div class="container">
-                <h3>Menu Highlights</h3>
-                <div class="menu-grid">
-                    <article class="card">
-                        <h4>Starters</h4>
-                        <p>Roasted Tomato Soup, Seasonal Salad, Crispy Calamari</p>
-                    </article>
-                    <article class="card">
-                        <h4>Main Dishes</h4>
-                        <p>Grilled Salmon, Ribeye Steak, Wild Mushroom Risotto</p>
-                    </article>
-                    <article class="card">
-                        <h4>Desserts</h4>
-                        <p>Chocolate Torte, Lemon Tart, Vanilla Bean Cheesecake</p>
-                    </article>
+                <div class="hero-actions">
+                    <a class="button" href="#reserve">Reserve a Table</a>
+                    <a class="button button-outline" href="#menu">View Menu</a>
                 </div>
             </div>
         </section>
 
-        <section id="visit" class="section">
+        <!-- About -->
+        <section id="about" class="section" aria-labelledby="about-heading">
+            <div class="container two-col">
+                <div class="col-text">
+                    <p class="eyebrow">Our Story</p>
+                    <h2 id="about-heading">Rooted in Community, Driven by Flavor</h2>
+                    <p>
+                        Great Divide started as a simple idea: bring people together over honest, delicious food made
+                        with ingredients sourced from nearby farms and purveyors.
+                    </p>
+                    <p>
+                        Our kitchen team changes the menu every few weeks to follow the seasons, so there is always
+                        something new to discover — and something comfortably familiar to return to.
+                    </p>
+                    <p>
+                        Whether you're celebrating a milestone or grabbing a weeknight dinner, we make every table feel
+                        like the best seat in the house.
+                    </p>
+                </div>
+                <div class="col-feature" aria-hidden="true">
+                    <div class="feature-badge">
+                        <span class="badge-number">100%</span>
+                        <span class="badge-label">Locally Sourced</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li>&#10003; Seasonal menu updated regularly</li>
+                        <li>&#10003; Partnerships with 12+ local farms</li>
+                        <li>&#10003; Family &amp; dog-friendly patio</li>
+                        <li>&#10003; Full bar with local craft beers</li>
+                        <li>&#10003; Private dining for up to 30 guests</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu" class="section section-muted" aria-labelledby="menu-heading">
             <div class="container">
-                <h3>Visit Us</h3>
-                <p><strong>Address:</strong> 123 Main Street, Your City</p>
-                <p><strong>Hours:</strong> Tue-Sun 11:00 AM - 10:00 PM</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p class="eyebrow">What We Serve</p>
+                <h2 id="menu-heading">Menu Highlights</h2>
+                <p class="section-sub">A taste of what's on our current menu. Dishes rotate with the seasons.</p>
+                <div class="menu-grid">
+                    <article class="card" aria-label="Starters">
+                        <div class="card-icon" aria-hidden="true">🥗</div>
+                        <h3>Starters</h3>
+                        <ul class="dish-list">
+                            <li>Roasted Tomato Bisque</li>
+                            <li>Seasonal Farm Salad</li>
+                            <li>Crispy Fried Calamari</li>
+                            <li>Whipped Ricotta Crostini</li>
+                        </ul>
+                        <p class="price-range">$9 – $16</p>
+                    </article>
+                    <article class="card" aria-label="Main Dishes">
+                        <div class="card-icon" aria-hidden="true">🍽️</div>
+                        <h3>Main Dishes</h3>
+                        <ul class="dish-list">
+                            <li>Cedar-Plank Grilled Salmon</li>
+                            <li>12 oz Dry-Aged Ribeye</li>
+                            <li>Wild Mushroom Risotto</li>
+                            <li>Free-Range Half Chicken</li>
+                        </ul>
+                        <p class="price-range">$22 – $48</p>
+                    </article>
+                    <article class="card" aria-label="Desserts">
+                        <div class="card-icon" aria-hidden="true">🍰</div>
+                        <h3>Desserts</h3>
+                        <ul class="dish-list">
+                            <li>Dark Chocolate Torte</li>
+                            <li>Meyer Lemon Tart</li>
+                            <li>Vanilla Bean Cheesecake</li>
+                            <li>Seasonal Fruit Crumble</li>
+                        </ul>
+                        <p class="price-range">$9 – $13</p>
+                    </article>
+                    <article class="card" aria-label="Drinks">
+                        <div class="card-icon" aria-hidden="true">🍷</div>
+                        <h3>Drinks</h3>
+                        <ul class="dish-list">
+                            <li>Rotating Local Craft Beers</li>
+                            <li>Curated Wine List</li>
+                            <li>Hand-Crafted Cocktails</li>
+                            <li>Artisan Coffee &amp; Tea</li>
+                        </ul>
+                        <p class="price-range">$6 – $18</p>
+                    </article>
+                </div>
+                <p class="menu-note">
+                    Consuming raw or undercooked meats, poultry, seafood, or eggs may increase your risk of foodborne illness.
+                    Please inform your server of any dietary restrictions or allergies.
+                </p>
+            </div>
+        </section>
+
+        <!-- Visit -->
+        <section id="visit" class="section" aria-labelledby="visit-heading">
+            <div class="container two-col">
+                <div class="col-text">
+                    <p class="eyebrow">Find Us</p>
+                    <h2 id="visit-heading">Visit Us</h2>
+                    <address class="visit-details">
+                        <div class="visit-item">
+                            <span class="visit-label">Address</span>
+                            <span>123 Main Street<br>Great Divide, CO 80447</span>
+                        </div>
+                        <div class="visit-item">
+                            <span class="visit-label">Hours</span>
+                            <ul class="hours-list">
+                                <li>Tue – Fri: 11:00 AM – 10:00 PM</li>
+                                <li>Sat – Sun: 9:00 AM – 10:00 PM</li>
+                                <li><em>Weekend Brunch: 9 AM – 2 PM</em></li>
+                                <li>Mon: Closed</li>
+                            </ul>
+                        </div>
+                        <div class="visit-item">
+                            <span class="visit-label">Phone</span>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </div>
+                        <div class="visit-item">
+                            <span class="visit-label">Email</span>
+                            <a href="mailto:hello@greatdividerestaurant.com">hello@greatdividerestaurant.com</a>
+                        </div>
+                    </address>
+                </div>
+                <div class="col-map">
+                    <div class="map-placeholder" role="img" aria-label="Map location placeholder — 123 Main Street, Great Divide, CO">
+                        <span>📍 123 Main Street<br>Great Divide, CO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation CTA -->
+        <section id="reserve" class="section section-accent" aria-labelledby="reserve-heading">
+            <div class="container reserve-inner">
+                <h2 id="reserve-heading">Ready to Join Us?</h2>
+                <p>Call ahead or fill out our reservation form and we'll confirm your table within the hour.</p>
+                <div class="reserve-actions">
+                    <a class="button button-light" href="tel:+15551234567">Call (555) 123-4567</a>
+                    <form class="reserve-form" aria-label="Reservation inquiry form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-name">Name</label>
+                                <input type="text" id="res-name" name="name" placeholder="Your name" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-phone">Phone</label>
+                                <input type="tel" id="res-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-date">Date</label>
+                                <input type="date" id="res-date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-guests">Guests</label>
+                                <select id="res-guests" name="guests" required>
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">1 guest</option>
+                                    <option value="2">2 guests</option>
+                                    <option value="3">3 guests</option>
+                                    <option value="4">4 guests</option>
+                                    <option value="5">5 guests</option>
+                                    <option value="6">6 guests</option>
+                                    <option value="7+">7+ guests</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="button button-light">Request Reservation</button>
+                        <p class="form-note" id="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo">Great Divide</span>
+                <p>Farm to table dining in the heart of the mountains.</p>
+            </div>
+            <nav aria-label="Footer navigation">
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                    <li><a href="#reserve">Reserve</a></li>
+                </ul>
+            </nav>
+            <div class="footer-contact">
+                <a href="tel:+15551234567">(555) 123-4567</a>
+                <a href="mailto:hello@greatdividerestaurant.com">hello@greatdividerestaurant.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
