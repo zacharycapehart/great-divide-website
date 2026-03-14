@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Divide Restaurant</title>
-    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting.">
+    <title>Great Divide Restaurant | Farm to Table Dining</title>
+    <meta name="description" content="Great Divide Restaurant offers farm-to-table dining with seasonal ingredients, bold flavors, and a warm neighborhood atmosphere. Join us for lunch, dinner, and weekend brunch.">
+    <meta name="keywords" content="Great Divide Restaurant, farm to table, seasonal menu, local ingredients, fine dining, brunch">
+    <meta property="og:title" content="Great Divide Restaurant | Farm to Table Dining">
+    <meta property="og:description" content="Seasonal ingredients, bold flavors, and a neighborhood atmosphere. Join us for lunch, dinner, and weekend brunch.">
+    <meta property="og:type" content="restaurant">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <div class="container header-inner">
-            <h1 class="logo">Great Divide</h1>
-            <nav>
+            <a href="#home" class="logo-link" aria-label="Great Divide Restaurant — home">
+                <span class="logo" aria-hidden="true">Great Divide</span>
+            </a>
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="primary-nav" aria-label="Primary navigation">
                 <ul class="nav-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,62 +37,285 @@
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
+    <main id="main-content">
+        <section id="home" class="hero" aria-label="Welcome">
+            <div class="container hero-content">
                 <p class="eyebrow">Farm to Table</p>
-                <h2>Welcome to Great Divide Restaurant</h2>
-                <p>
-                    Seasonal ingredients, bold flavors, and a neighborhood atmosphere.
-                    Join us for lunch, dinner, and weekend brunch.
+                <h1>Where Every Plate Tells a Story</h1>
+                <p class="hero-lead">
+                    Seasonal ingredients sourced from local farms, transformed into bold, honest dishes.
+                    Join us for lunch, dinner, and weekend brunch in the heart of the neighborhood.
                 </p>
-                <a class="button" href="#visit">Reserve a Table</a>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h3>About Us</h3>
-                <p>
-                    We are a locally owned restaurant focused on fresh, sustainable ingredients.
-                    Our menu changes regularly to highlight what is in season.
-                </p>
-            </div>
-        </section>
-
-        <section id="menu" class="section section-muted">
-            <div class="container">
-                <h3>Menu Highlights</h3>
-                <div class="menu-grid">
-                    <article class="card">
-                        <h4>Starters</h4>
-                        <p>Roasted Tomato Soup, Seasonal Salad, Crispy Calamari</p>
-                    </article>
-                    <article class="card">
-                        <h4>Main Dishes</h4>
-                        <p>Grilled Salmon, Ribeye Steak, Wild Mushroom Risotto</p>
-                    </article>
-                    <article class="card">
-                        <h4>Desserts</h4>
-                        <p>Chocolate Torte, Lemon Tart, Vanilla Bean Cheesecake</p>
-                    </article>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#visit">Reserve a Table</a>
+                    <a class="button button-secondary" href="#menu">View Menu</a>
                 </div>
             </div>
         </section>
 
-        <section id="visit" class="section">
+        <section id="about" class="section" aria-labelledby="about-heading">
+            <div class="container about-grid">
+                <div class="about-text">
+                    <p class="eyebrow">Our Story</p>
+                    <h2 id="about-heading">Rooted in Community, Driven by Season</h2>
+                    <p>
+                        Great Divide was born from a simple idea: that the best meals come from knowing where
+                        your food originates. We partner directly with family farms within 100 miles of our kitchen
+                        to bring the freshest produce, meats, and dairy to your table.
+                    </p>
+                    <p>
+                        Our menu evolves every few weeks as harvests change. What you taste in spring will be
+                        different from what you taste in autumn — and that's exactly the point.
+                    </p>
+                    <dl class="about-values">
+                        <div class="about-value-item">
+                            <dt>Local Sourcing</dt>
+                            <dd>100% of our produce comes from regional farms</dd>
+                        </div>
+                        <div class="about-value-item">
+                            <dt>Seasonal Menus</dt>
+                            <dd>Updated every few weeks to reflect what's at its peak</dd>
+                        </div>
+                        <div class="about-value-item">
+                            <dt>Zero Waste Kitchen</dt>
+                            <dd>Stems, skins, and trimmings become stocks, sauces, and garnishes</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="about-aside">
+                    <div class="about-stat-card">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Local farm partners</span>
+                    </div>
+                    <div class="about-stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Seasonal dishes on the current menu</span>
+                    </div>
+                    <div class="about-stat-card">
+                        <span class="stat-number">5 yrs</span>
+                        <span class="stat-label">Serving the neighborhood</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="section section-muted" aria-labelledby="menu-heading">
             <div class="container">
-                <h3>Visit Us</h3>
-                <p><strong>Address:</strong> 123 Main Street, Your City</p>
-                <p><strong>Hours:</strong> Tue-Sun 11:00 AM - 10:00 PM</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p class="eyebrow">Current Season</p>
+                <h2 id="menu-heading">Menu Highlights</h2>
+                <p class="section-intro">A taste of what's on the menu right now. Ask your server about today's specials.</p>
+
+                <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+                    <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="tab-starters" id="btn-starters">Starters</button>
+                    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-mains" id="btn-mains">Mains</button>
+                    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-desserts" id="btn-desserts">Desserts</button>
+                    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-drinks" id="btn-drinks">Drinks</button>
+                </div>
+
+                <div class="menu-panels">
+                    <div class="menu-panel active" id="tab-starters" role="tabpanel" aria-labelledby="btn-starters">
+                        <div class="menu-grid">
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Roasted Tomato Soup</h3>
+                                    <span class="menu-price">$12</span>
+                                </div>
+                                <p>Slow-roasted heirloom tomatoes, basil oil, crusty sourdough croutons</p>
+                                <span class="menu-tag">Vegetarian</span>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Seasonal Harvest Salad</h3>
+                                    <span class="menu-price">$14</span>
+                                </div>
+                                <p>Mixed greens, roasted root vegetables, candied walnuts, honey-lemon vinaigrette</p>
+                                <span class="menu-tag">Vegan</span>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Crispy Calamari</h3>
+                                    <span class="menu-price">$16</span>
+                                </div>
+                                <p>Lightly fried squid, charred lemon aioli, smoked paprika salt</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Charcuterie Board</h3>
+                                    <span class="menu-price">$22</span>
+                                </div>
+                                <p>Selection of local cured meats, artisan cheeses, seasonal preserves, seeded crackers</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="menu-panel" id="tab-mains" role="tabpanel" aria-labelledby="btn-mains" hidden>
+                        <div class="menu-grid">
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Pan-Seared Salmon</h3>
+                                    <span class="menu-price">$34</span>
+                                </div>
+                                <p>Wild-caught salmon, sautéed greens, lemon-caper butter, fingerling potatoes</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Dry-Aged Ribeye</h3>
+                                    <span class="menu-price">$52</span>
+                                </div>
+                                <p>12 oz grass-fed ribeye, herb compound butter, roasted garlic mashed potatoes, seasonal vegetable</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Wild Mushroom Risotto</h3>
+                                    <span class="menu-price">$28</span>
+                                </div>
+                                <p>Arborio rice, foraged mushroom blend, aged parmesan, fresh thyme</p>
+                                <span class="menu-tag">Vegetarian</span>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Free-Range Chicken</h3>
+                                    <span class="menu-price">$30</span>
+                                </div>
+                                <p>Brick-pressed half chicken, roasted root vegetables, pan jus, herb salad</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="menu-panel" id="tab-desserts" role="tabpanel" aria-labelledby="btn-desserts" hidden>
+                        <div class="menu-grid">
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Dark Chocolate Torte</h3>
+                                    <span class="menu-price">$12</span>
+                                </div>
+                                <p>72% dark chocolate, salted caramel, hazelnut crumble, vanilla bean gelato</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Meyer Lemon Tart</h3>
+                                    <span class="menu-price">$11</span>
+                                </div>
+                                <p>Buttery shortcrust, lemon curd, seasonal berry compote, candied zest</p>
+                                <span class="menu-tag">Vegetarian</span>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Vanilla Bean Cheesecake</h3>
+                                    <span class="menu-price">$11</span>
+                                </div>
+                                <p>New York style, graham cracker crust, fresh seasonal fruit coulis</p>
+                                <span class="menu-tag">Vegetarian</span>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="menu-panel" id="tab-drinks" role="tabpanel" aria-labelledby="btn-drinks" hidden>
+                        <div class="menu-grid">
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Seasonal Cocktails</h3>
+                                    <span class="menu-price">$14–$16</span>
+                                </div>
+                                <p>Rotating selection featuring local spirits and fresh-pressed juices</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Natural Wine</h3>
+                                    <span class="menu-price">$12–$18 / glass</span>
+                                </div>
+                                <p>Curated selection of low-intervention wines from small producers</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Craft Beer</h3>
+                                    <span class="menu-price">$8–$10</span>
+                                </div>
+                                <p>Local and regional craft beers on draft and in bottle</p>
+                            </article>
+                            <article class="menu-item">
+                                <div class="menu-item-header">
+                                    <h3>Non-Alcoholic</h3>
+                                    <span class="menu-price">$5–$8</span>
+                                </div>
+                                <p>House-made sodas, fresh-pressed juices, specialty coffees and teas</p>
+                                <span class="menu-tag">0% ABV</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="menu-note">Menu items and prices subject to change based on seasonal availability. Please inform your server of any dietary restrictions or allergies.</p>
+            </div>
+        </section>
+
+        <section id="visit" class="section" aria-labelledby="visit-heading">
+            <div class="container visit-grid">
+                <div class="visit-info">
+                    <p class="eyebrow">Find Us</p>
+                    <h2 id="visit-heading">Visit Great Divide</h2>
+
+                    <div class="info-block">
+                        <h3>Address</h3>
+                        <address>
+                            1840 Ridgeline Avenue<br>
+                            Denver, CO 80203
+                        </address>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Hours</h3>
+                        <dl class="hours-list">
+                            <dt>Monday</dt>
+                            <dd>Closed</dd>
+                            <dt>Tuesday – Thursday</dt>
+                            <dd>11:30 AM – 9:30 PM</dd>
+                            <dt>Friday – Saturday</dt>
+                            <dd>11:30 AM – 10:30 PM</dd>
+                            <dt>Sunday</dt>
+                            <dd>10:00 AM – 9:00 PM (Brunch until 3 PM)</dd>
+                        </dl>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Contact</h3>
+                        <p>
+                            <a href="tel:+17205550182">(720) 555-0182</a><br>
+                            <a href="mailto:hello@greatdividerestaurant.com">hello@greatdividerestaurant.com</a>
+                        </p>
+                    </div>
+
+                    <a class="button button-primary" href="tel:+17205550182">Call to Reserve</a>
+                </div>
+
+                <div class="visit-map" aria-label="Map placeholder">
+                    <div class="map-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" width="48" height="48">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        <p>1840 Ridgeline Avenue, Denver CO</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo">Great Divide</span>
+                <p>Farm to table dining in Denver, Colorado.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copy">&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
         </div>
     </footer>
 
