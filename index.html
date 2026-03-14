@@ -4,12 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Divide Restaurant</title>
-    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting.">
+    <title>Great Divide Restaurant – Farm to Table Dining</title>
+    <meta name="description" content="Great Divide Restaurant offers seasonal farm-to-table dishes. Join us for lunch, dinner, and weekend brunch. Reserve your table today.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Great Divide Restaurant">
+    <meta property="og:description" content="Farm-to-table seasonal dining. Fresh ingredients, bold flavors, neighborhood atmosphere.">
+    <meta property="og:type" content="restaurant.restaurant">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Great Divide Restaurant">
+    <meta name="twitter:description" content="Farm-to-table seasonal dining. Fresh ingredients, bold flavors.">
+
+    <!-- Schema.org Structured Data – Update placeholder values before launch -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Great Divide Restaurant",
+      "description": "Seasonal farm-to-table restaurant offering lunch, dinner, and weekend brunch.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Your City",
+        "addressRegion": "ST",
+        "postalCode": "00000"
+      },
+      "telephone": "(555) 123-4567",
+      "openingHours": ["Tu-Su 11:00-22:00"],
+      "servesCuisine": "American",
+      "priceRange": "$$"
+    }
+    </script>
+
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <div class="container header-inner">
             <h1 class="logo">Great Divide</h1>
@@ -24,7 +57,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="home" class="hero">
             <div class="container">
                 <p class="eyebrow">Farm to Table</p>
@@ -39,7 +72,7 @@
 
         <section id="about" class="section">
             <div class="container">
-                <h3>About Us</h3>
+                <h2>About Us</h2>
                 <p>
                     We are a locally owned restaurant focused on fresh, sustainable ingredients.
                     Our menu changes regularly to highlight what is in season.
@@ -49,18 +82,18 @@
 
         <section id="menu" class="section section-muted">
             <div class="container">
-                <h3>Menu Highlights</h3>
+                <h2>Menu Highlights</h2>
                 <div class="menu-grid">
                     <article class="card">
-                        <h4>Starters</h4>
+                        <h3>Starters</h3>
                         <p>Roasted Tomato Soup, Seasonal Salad, Crispy Calamari</p>
                     </article>
                     <article class="card">
-                        <h4>Main Dishes</h4>
+                        <h3>Main Dishes</h3>
                         <p>Grilled Salmon, Ribeye Steak, Wild Mushroom Risotto</p>
                     </article>
                     <article class="card">
-                        <h4>Desserts</h4>
+                        <h3>Desserts</h3>
                         <p>Chocolate Torte, Lemon Tart, Vanilla Bean Cheesecake</p>
                     </article>
                 </div>
@@ -69,10 +102,18 @@
 
         <section id="visit" class="section">
             <div class="container">
-                <h3>Visit Us</h3>
-                <p><strong>Address:</strong> 123 Main Street, Your City</p>
-                <p><strong>Hours:</strong> Tue-Sun 11:00 AM - 10:00 PM</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <h2>Visit Us</h2>
+                <p>
+                    <strong>Address:</strong>
+                    <a href="https://maps.google.com/?q=123+Main+Street,+Your+City" target="_blank" rel="noopener noreferrer">
+                        123 Main Street, Your City
+                    </a>
+                </p>
+                <p><strong>Hours:</strong> Tue–Sun 11:00 AM – 10:00 PM</p>
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+15551234567">(555) 123-4567</a>
+                </p>
             </div>
         </section>
     </main>
@@ -83,7 +124,7 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
