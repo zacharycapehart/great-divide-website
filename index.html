@@ -5,80 +5,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Divide Restaurant</title>
-    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting.">
+    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting. Farm-to-table dining for lunch, dinner, and weekend brunch.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Great Divide Restaurant">
+    <meta property="og:description" content="Farm-to-table dining with seasonal ingredients and bold flavors. Join us for lunch, dinner, and weekend brunch.">
+    <meta property="og:url" content="https://zacharycapehart.github.io/great-divide-website/">
+
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <header class="site-header">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <div class="container header-inner">
-            <h1 class="logo">Great Divide</h1>
-            <nav>
+            <a href="#home" class="logo">Great Divide</a>
+            <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <nav id="primary-nav" aria-label="Primary navigation">
                 <ul class="nav-list">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#visit">Visit</a></li>
+                    <li><a href="#reserve">Reserve</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
+    <main id="main-content">
+        <section id="home" class="hero" aria-labelledby="hero-heading">
             <div class="container">
                 <p class="eyebrow">Farm to Table</p>
-                <h2>Welcome to Great Divide Restaurant</h2>
+                <h1 id="hero-heading">Welcome to Great Divide Restaurant</h1>
                 <p>
                     Seasonal ingredients, bold flavors, and a neighborhood atmosphere.
                     Join us for lunch, dinner, and weekend brunch.
                 </p>
-                <a class="button" href="#visit">Reserve a Table</a>
+                <a class="button" href="#reserve">Reserve a Table</a>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="section" aria-labelledby="about-heading">
             <div class="container">
-                <h3>About Us</h3>
+                <h2 id="about-heading">About Us</h2>
                 <p>
                     We are a locally owned restaurant focused on fresh, sustainable ingredients.
-                    Our menu changes regularly to highlight what is in season.
+                    Our menu changes regularly to highlight what is in season. Every dish is crafted
+                    with care by our team of passionate chefs who believe great food starts at the source.
                 </p>
             </div>
         </section>
 
-        <section id="menu" class="section section-muted">
+        <section id="menu" class="section section-muted" aria-labelledby="menu-heading">
             <div class="container">
-                <h3>Menu Highlights</h3>
+                <h2 id="menu-heading">Menu Highlights</h2>
                 <div class="menu-grid">
                     <article class="card">
-                        <h4>Starters</h4>
-                        <p>Roasted Tomato Soup, Seasonal Salad, Crispy Calamari</p>
+                        <h3>Starters</h3>
+                        <ul class="menu-items">
+                            <li>Roasted Tomato Soup</li>
+                            <li>Seasonal Salad</li>
+                            <li>Crispy Calamari</li>
+                        </ul>
                     </article>
                     <article class="card">
-                        <h4>Main Dishes</h4>
-                        <p>Grilled Salmon, Ribeye Steak, Wild Mushroom Risotto</p>
+                        <h3>Main Dishes</h3>
+                        <ul class="menu-items">
+                            <li>Grilled Salmon</li>
+                            <li>Ribeye Steak</li>
+                            <li>Wild Mushroom Risotto</li>
+                        </ul>
                     </article>
                     <article class="card">
-                        <h4>Desserts</h4>
-                        <p>Chocolate Torte, Lemon Tart, Vanilla Bean Cheesecake</p>
+                        <h3>Desserts</h3>
+                        <ul class="menu-items">
+                            <li>Chocolate Torte</li>
+                            <li>Lemon Tart</li>
+                            <li>Vanilla Bean Cheesecake</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="visit" class="section">
+        <section id="visit" class="section" aria-labelledby="visit-heading">
+            <div class="container visit-grid">
+                <div>
+                    <h2 id="visit-heading">Visit Us</h2>
+                    <address class="visit-address">
+                        <p>
+                            <strong>Address:</strong><br>
+                            123 Main Street<br>
+                            Your City, ST 00000
+                        </p>
+                        <p>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:+15551234567">(555) 123-4567</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:hello@greatdividerestaurant.com">hello@greatdividerestaurant.com</a>
+                        </p>
+                    </address>
+                    <table class="hours-table" aria-label="Restaurant hours">
+                        <caption>Hours of Operation</caption>
+                        <tbody>
+                            <tr><td>Monday</td><td>Closed</td></tr>
+                            <tr><td>Tuesday – Friday</td><td>11:00 AM – 10:00 PM</td></tr>
+                            <tr><td>Saturday</td><td>10:00 AM – 11:00 PM</td></tr>
+                            <tr><td>Sunday</td><td>10:00 AM – 9:00 PM</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="map-placeholder" aria-label="Map placeholder – address: 123 Main Street, Your City">
+                    <p>📍 Map coming soon</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reserve" class="section section-muted" aria-labelledby="reserve-heading">
             <div class="container">
-                <h3>Visit Us</h3>
-                <p><strong>Address:</strong> 123 Main Street, Your City</p>
-                <p><strong>Hours:</strong> Tue-Sun 11:00 AM - 10:00 PM</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <h2 id="reserve-heading">Make a Reservation</h2>
+                <p>Book your table online or call us at <a href="tel:+15551234567">(555) 123-4567</a>.</p>
+                <!-- Note: form submission requires a backend endpoint. Currently shows a confirmation message on submit. -->
+                <form class="reservation-form" action="#" method="post" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-name">Full Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="res-name" name="name" required autocomplete="name" placeholder="Jane Smith">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="res-email" name="email" required autocomplete="email" placeholder="jane@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-phone">Phone</label>
+                            <input type="tel" id="res-phone" name="phone" autocomplete="tel" placeholder="(555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-guests">Number of Guests <span aria-hidden="true">*</span></label>
+                            <select id="res-guests" name="guests" required>
+                                <option value="">Select…</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7+">7 or more</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="res-date">Preferred Date <span aria-hidden="true">*</span></label>
+                            <input type="date" id="res-date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-time">Preferred Time <span aria-hidden="true">*</span></label>
+                            <select id="res-time" name="time" required>
+                                <option value="">Select…</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="11:30">11:30 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="12:30">12:30 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="13:30">1:30 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="res-notes">Special Requests</label>
+                        <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, accessibility needs, special occasions…"></textarea>
+                    </div>
+                    <button type="submit" class="button">Request Reservation</button>
+                    <p class="form-note">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required. We will confirm your reservation by email within 24 hours.</p>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <p class="footer-logo">Great Divide</p>
+                <p class="footer-tagline">Farm to Table · Your City</p>
+            </div>
+            <nav aria-label="Footer navigation">
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#visit">Visit</a></li>
+                    <li><a href="#reserve">Reserve</a></li>
+                </ul>
+            </nav>
+            <div class="footer-social">
+                <!-- Replace # with actual social media profile URLs -->
+                <a href="#" aria-label="Great Divide on Instagram" class="social-link">Instagram</a>
+                <a href="#" aria-label="Great Divide on Facebook" class="social-link">Facebook</a>
+            </div>
+        </div>
+        <div class="container footer-legal">
             <p>&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
         </div>
     </footer>
