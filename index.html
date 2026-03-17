@@ -4,21 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Great Divide Restaurant</title>
-    <meta name="description" content="Great Divide Restaurant serves fresh seasonal dishes in a warm, modern setting.">
+    <title>The Great Divide | Neighborhood Pub in Indianapolis</title>
+    <meta name="description"
+        content="The Great Divide is a neighborhood pub in Indianapolis between Lockerbie Square and Holy Cross. Join locals for comfort food, friendly service, and live music most evenings.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Great Divide | Neighborhood Pub in Indianapolis">
+    <meta property="og:description"
+        content="A welcoming neighborhood pub between Lockerbie Square and Holy Cross in Indianapolis. Comfort food, live music, and a place locals call home.">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:url" content="https://zacharycapehart.github.io/great-divide-website/">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Restaurant Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarOrPub",
+      "name": "The Great Divide",
+      "description": "A neighborhood pub in Indianapolis located between Lockerbie Square and Holy Cross neighborhoods.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[STREET ADDRESS]",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "postalCode": "[ZIP CODE]",
+        "addressCountry": "US"
+      },
+      "telephone": "[PHONE NUMBER]",
+      "url": "https://zacharycapehart.github.io/great-divide-website/",
+      "openingHours": ["Tu-Su 11:00-22:00"],
+      "priceRange": "$$",
+      "servesCuisine": "American",
+      "hasMenu": "https://zacharycapehart.github.io/great-divide-website/menu.html"
+    }
+    </script>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <h1 class="logo">Great Divide</h1>
-            <nav>
+            <a href="index.html" class="logo-link">
+                <span class="logo">The Great Divide</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="site-nav" id="site-nav">
                 <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#visit">Visit</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="live-music.html">Live Music</a></li>
+                    <li><a href="contact.html">Location</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,59 +67,78 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <p class="eyebrow">Farm to Table</p>
-                <h2>Welcome to Great Divide Restaurant</h2>
+                <p class="eyebrow">Indianapolis Neighborhood Pub</p>
+                <h2>Your neighborhood pub between Lockerbie Square and Holy Cross</h2>
                 <p>
-                    Seasonal ingredients, bold flavors, and a neighborhood atmosphere.
-                    Join us for lunch, dinner, and weekend brunch.
+                    The Great Divide is where Indianapolis neighbors gather for comfort food,
+                    friendly faces, and live music most evenings. A place you come back to.
                 </p>
-                <a class="button" href="#visit">Reserve a Table</a>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h3>About Us</h3>
-                <p>
-                    We are a locally owned restaurant focused on fresh, sustainable ingredients.
-                    Our menu changes regularly to highlight what is in season.
-                </p>
-            </div>
-        </section>
-
-        <section id="menu" class="section section-muted">
-            <div class="container">
-                <h3>Menu Highlights</h3>
-                <div class="menu-grid">
-                    <article class="card">
-                        <h4>Starters</h4>
-                        <p>Roasted Tomato Soup, Seasonal Salad, Crispy Calamari</p>
-                    </article>
-                    <article class="card">
-                        <h4>Main Dishes</h4>
-                        <p>Grilled Salmon, Ribeye Steak, Wild Mushroom Risotto</p>
-                    </article>
-                    <article class="card">
-                        <h4>Desserts</h4>
-                        <p>Chocolate Torte, Lemon Tart, Vanilla Bean Cheesecake</p>
-                    </article>
+                <div class="hero-actions">
+                    <a class="button" href="menu.html">See the Menu</a>
+                    <a class="button button-outline" href="contact.html">Find Us</a>
                 </div>
             </div>
         </section>
 
-        <section id="visit" class="section">
+        <section class="section">
+            <div class="container section-three-col">
+                <div class="feature-card">
+                    <h3>Comfort Food</h3>
+                    <p>Familiar dishes done right. The kind of food that keeps you coming back.</p>
+                    <a href="menu.html">View the Menu &rarr;</a>
+                </div>
+                <div class="feature-card">
+                    <h3>Live Music</h3>
+                    <p>Piano nights, local musicians, and good company most evenings.</p>
+                    <a href="live-music.html">See the Schedule &rarr;</a>
+                </div>
+                <div class="feature-card">
+                    <h3>The Neighborhood</h3>
+                    <p>Tucked between Lockerbie Square and Holy Cross in Indianapolis.</p>
+                    <a href="contact.html">Get Directions &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted">
             <div class="container">
-                <h3>Visit Us</h3>
-                <p><strong>Address:</strong> 123 Main Street, Your City</p>
-                <p><strong>Hours:</strong> Tue-Sun 11:00 AM - 10:00 PM</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <h3>A pub where you know people</h3>
+                <p class="section-lead">
+                    The Great Divide is the kind of place where regulars know each other by name,
+                    newcomers are made to feel welcome, and the conversation flows as easily as the drinks.
+                    A Cheers-style neighborhood pub for the people of Indianapolis.
+                </p>
+                <a class="button" href="about.html">About The Great Divide</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container visit-bar">
+                <div class="visit-item">
+                    <strong>Address</strong>
+                    <span>[STREET ADDRESS]<br>Indianapolis, IN</span>
+                </div>
+                <div class="visit-item">
+                    <strong>Hours</strong>
+                    <span>Tue &ndash; Sun<br>11:00 AM &ndash; 10:00 PM</span>
+                </div>
+                <div class="visit-item">
+                    <strong>Phone</strong>
+                    <a href="tel:[PHONE]">[PHONE NUMBER]</a>
+                </div>
+                <div class="visit-item">
+                    <a class="button" href="contact.html">Get Directions</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Great Divide Restaurant. All rights reserved.</p>
+        <div class="container footer-inner">
+            <p class="footer-name">The Great Divide</p>
+            <p class="footer-address">[STREET ADDRESS] &bull; Indianapolis, IN &bull; <a href="tel:[PHONE]">[PHONE
+                    NUMBER]</a></p>
+            <p class="footer-copy">&copy; <span id="year"></span> The Great Divide. All rights reserved.</p>
         </div>
     </footer>
 

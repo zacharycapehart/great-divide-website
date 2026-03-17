@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zacharycapehart.github.io/great-divide-website/sitemap.xml
